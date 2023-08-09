@@ -29,5 +29,10 @@ export const Square = ({id,cell, cells, setCells, turn, setTurn, winningMessage}
 
 
 Square.propTypes = {
-    id: PropTypes.number.isRequired
+    id: PropTypes.number.isRequired,
+    winningMessage: PropTypes.string,
+    turn: PropTypes.string.isRequired,
+    setTurn: PropTypes.func.isRequired,
+    setCells: PropTypes.func.isRequired, 
+    cells: PropTypes.array.isRequired
 }
