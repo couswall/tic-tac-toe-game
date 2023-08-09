@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-background: #331D2C;
+    --color-1:#EFE1D1;
+    --color-2:#A78295;
+    --color-3:#3F2E3E;
+    --font: 'Nunito', sans-serif;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--main-background);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 1.875rem;
+    margin-bottom: 2.5rem;
+}
+
+.grid-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.3125rem;
+    border: 1px solid var(--color-1);
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.2s all ease-in;    
+}
+.grid-item:hover{
+    transform: scale(1.01);
+}
+
+.title{
+    text-align: center;
+    color: var(--color-1);
+    margin-bottom: 2.5rem;
+}
+
+.title{
+    font-size: 20px;
+}
+
+#main-title{
+    text-transform: capitalize;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+
+#turn-span{
+    color: var(--color-2);
+}
+
+#winningMessage{
+    color: var(--color-3);
+    font-size: 30px;
+    margin-bottom: 1.25rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    z-index: 30;
+}
+
+.modal-content {
+    text-align: center;
+    background-color: var(--color-1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    max-width: 80%;
+    padding: 1.25rem;
+    border-radius: 5px;
+    
+}
+
+#restart-btn{
+    font-family: var(--font) ;
+    outline: none;
+    border: none;
+    color: var(--color-1);
+    padding: 0.5rem 0.9375rem;
+    background-color: var(--main-background);
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    font-size: 14px;
+}
+
+#restart-btn:hover{
+    background-color: #613754;
+}
